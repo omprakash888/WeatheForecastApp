@@ -7,10 +7,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -52,11 +50,8 @@ fun MainScreens(
 fun ShowData(state: WeatherScreenState) {
 
     if (state.isGettingWeatherData) {
-        CircularProgressIndicator(
-            modifier = Modifier.width(64.dp),
-            color = MaterialTheme.colorScheme.secondary,
-            trackColor = MaterialTheme.colorScheme.surfaceVariant,
-        )
+        //CircularProgressIndicator()
+        Log.d("Check", "okokokok")
     }
     else if (state.weatherData.isNotEmpty()){
         val weatherData = state.weatherData[0]
